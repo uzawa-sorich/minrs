@@ -1,0 +1,42 @@
+{
+  "name": "minrs",
+  "version": "0.1.0",
+  "description": "Rust-inspired features for JavaScript",
+  "scripts": {
+    "clean": "bun run ./scripts/clean.ts",
+    "prebuild": "npm run clean",
+    "build": "bun run build:esm && bun run build:cjs",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "prepack": "npm run build"
+  },
+  "main": "./lib/cjs/index.js",
+  "typings": "./lib/cjs/index.d.js",
+  "module": "./lib/esm/index.js",
+  "type": "module",
+  "files": [
+    "./lib/**/*"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "default": "./lib/esm/index.js"
+      },
+      "require": {
+        "default": "./lib/esm/index.js"
+      }
+    }
+  },
+  "author": "Takayuki Uzawa <uzawa@sorich.jp>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "18.13.0",
+    "@types/prettier": "2.7.2",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
+    "eslint": "8.33.0",
+    "eslint-config-prettier": "8.6.0",
+    "prettier": "2.8.3",
+    "typescript": "4.9.5"
+  }
+}

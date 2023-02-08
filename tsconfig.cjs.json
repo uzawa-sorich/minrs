@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    // Modules
+    "module": "CommonJS",
+    "rootDir": "./src",
+
+    // Language and Environment
+    "lib": ["ES2015"],
+    "target": "ES2015",
+
+    // Emit
+    "outDir": "./lib/cjs"
+  },
+  "include": ["./src/**/*.ts"]
+}

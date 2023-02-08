@@ -1,0 +1,41 @@
+// https://www.typescriptlang.org/tsconfig
+{
+  "compilerOptions": {
+    // Type Checking
+    "allowUnreachableCode": true,
+    "allowUnusedLabels": true,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": false,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
+    // Modules
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "types": ["node"],
+
+    // Language and Environment
+    "lib": ["ES2022"],
+    "target": "ES2022",
+
+    // Interop Constraints
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+
+    // Projects
+    "composite": true,
+    "incremental": true
+  }
+}

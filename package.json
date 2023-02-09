@@ -1,6 +1,6 @@
 {
   "name": "minrs",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Rust-inspired features for JavaScript",
   "homepage": "https://github.com/uzawa-sorich/minrs",
   "repository": {
@@ -10,14 +10,12 @@
   "scripts": {
     "clean": "bun run ./scripts/clean.ts",
     "prebuild": "bun run clean",
-    "build": "bun run build:esm && bun run build:cjs",
+    "build": "bun run build:esm",
     "build:esm": "tsc -p ./tsconfig.esm.json",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "prepack": "bun run build"
   },
-  "main": "./lib/cjs/index.js",
-  "typings": "./lib/cjs/index.d.js",
-  "module": "./lib/esm/index.js",
+  "main": "./lib/esm/index.js",
+  "typings": "./lib/esm/index.d.js",
   "type": "module",
   "files": [
     "./lib/**/*.d.ts",
@@ -26,9 +24,6 @@
   "exports": {
     ".": {
       "import": {
-        "default": "./lib/esm/index.js"
-      },
-      "require": {
         "default": "./lib/esm/index.js"
       }
     }

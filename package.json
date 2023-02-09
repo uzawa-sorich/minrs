@@ -9,11 +9,11 @@
   },
   "scripts": {
     "clean": "bun run ./scripts/clean.ts",
-    "prebuild": "npm run clean",
+    "prebuild": "bun run clean",
     "build": "bun run build:esm && bun run build:cjs",
     "build:esm": "tsc -p ./tsconfig.esm.json",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
-    "prepack": "npm run build"
+    "prepack": "bun run build"
   },
   "main": "./lib/cjs/index.js",
   "typings": "./lib/cjs/index.d.js",

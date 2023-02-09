@@ -2,6 +2,11 @@
   "name": "minrs",
   "version": "0.1.0",
   "description": "Rust-inspired features for JavaScript",
+  "homepage": "https://github.com/uzawa-sorich/minrs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uzawa-sorich/minrs.git"
+  },
   "scripts": {
     "clean": "bun run ./scripts/clean.ts",
     "prebuild": "npm run clean",
